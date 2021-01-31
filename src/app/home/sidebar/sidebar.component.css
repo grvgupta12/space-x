@@ -1,0 +1,11 @@
+.mat-button-toggle{
+    background: #d0f0c0 !important;
+    color: black !important;
+    border-radius: 5px !important;
+}
+
+.mat-button-toggle-checked{
+    background-color: #4cbb17 !important;
+    color: black !important;
+}
+
