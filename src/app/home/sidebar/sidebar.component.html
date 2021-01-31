@@ -1,7 +1,7 @@
 <form [formGroup]="filterForm">
     <!-- launch year -->
     <div class="launch-year mt-3 text-center">
-        <h3>Launch Year</h3>
+        <h5>Launch Year</h5>
         <mat-button-toggle-group class="row" multiple="false" formControlName='year'>
             <mat-button-toggle (change)="onFilterChange()" class="column" [value]="year" *ngFor="let year of yearsList">
                 {{year}}
@@ -11,7 +11,7 @@
 
     <!-- successful launch -->
     <div class="launch-successful mt-3 text-center">
-        <h3>Successful Launch</h3>
+        <h5>Successful Launch</h5>
         <mat-button-toggle-group class="row" multiple="false" formControlName='isLaunchSuccessful'>
             <mat-button-toggle (change)="onFilterChange()" class="column" [value]="option.code"
                 *ngFor="let option of trueFalseList">
@@ -22,7 +22,7 @@
 
     <!-- successful landing -->
     <div class="landing-successful mt-3 text-center">
-        <h3>Successful Landing</h3>
+        <h5>Successful Landing</h5>
         <mat-button-toggle-group class="row" multiple="false" formControlName='isLandingSuccessful'>
             <mat-button-toggle (change)="onFilterChange()" class="column" [value]="option.code"
                 *ngFor="let option of trueFalseList">
