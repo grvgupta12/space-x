@@ -24,4 +24,16 @@ mat-toolbar {
 
 h4{
  color: #551A8B;
+ font-weight: 800;
+}
+
+.details{
+    font-weight: 600;
+    font-size: 18px;
+    color: #4cbb17;
+    padding-left: 10px;
+}
+
+li b{
+    font-size: 20px;
 }

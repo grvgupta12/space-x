@@ -6,10 +6,18 @@
                 <mat-card-content>
                     <h4>{{data.mission_name}} {{data.flight_number}}</h4>
                     <ul class="list-style-none">
-                        <li><b>Mission Ids:</b> {{data.mission_id[0]}}</li>
-                        <li><b>Launch Year:</b> {{data.launch_year}}</li>
-                        <li><b>Successful Launch:</b> {{data.launch_success}}</li>
-                        <li><b>Successful Landing:</b>{{data.rocket.first_stage.cores[0].land_success}}</li>
+                        <li><b>Mission Ids:</b>
+                            <span class="details">{{data.mission_id[0]}}</span>
+                        </li>
+                        <li><b>Launch Year:</b>
+                            <span class="details"> {{data.launch_year}}</span>
+                        </li>
+                        <li><b>Successful Launch:</b>
+                            <span class="details"> {{data.launch_success}} </span>
+                        </li>
+                        <li><b>Successful Landing:</b>
+                            <span class="details">{{data.rocket.first_stage.cores[0].land_success}}</span>
+                        </li>
                     </ul>
                 </mat-card-content>
             </mat-card>
