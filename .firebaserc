@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "spacex-d4fb7"
+  },
+  "targets": {
+    "spacex-d4fb7": {
+      "hosting": {
+        "space-x": [
+          "spacex-d4fb7"
+        ]
+      }
+    }
+  }
+}
