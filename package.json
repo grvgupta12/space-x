@@ -13,6 +13,10 @@
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run space-x:server:production --bundleDependencies all"
   },
+  "engines": {
+    "node": "10.16.0",
+    "npm": "6.9.0"
+  },
   "private": true,
   "dependencies": {
     "@angular/cli": "~8.0.0",
