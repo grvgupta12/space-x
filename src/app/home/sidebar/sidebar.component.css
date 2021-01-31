@@ -2,10 +2,15 @@
     background: #d0f0c0 !important;
     color: black !important;
     border-radius: 5px !important;
+    flex: 40%;margin: 10px 5px;
 }
 
 .mat-button-toggle-checked{
     background-color: #4cbb17 !important;
     color: black !important;
+}
+
+.mat-button-toggle-group{
+    display: flex;border: none;
 }
 

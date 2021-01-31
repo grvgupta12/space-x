@@ -1,35 +1,31 @@
 <form [formGroup]="filterForm">
     <!-- launch year -->
-    <div class="launch-year mt-3" style="text-align: center;">
+    <div class="launch-year mt-3 text-center">
         <h3>Launch Year</h3>
-        <mat-button-toggle-group class="row" style="display: flex;border: none;" multiple="false"
-            formControlName='year'>
-            <mat-button-toggle (change)="onFilterChange()" class="column" style="flex: 40%;margin: 10px 5px;"
-                [value]="year" *ngFor="let year of yearsList">
+        <mat-button-toggle-group class="row" multiple="false" formControlName='year'>
+            <mat-button-toggle (change)="onFilterChange()" class="column" [value]="year" *ngFor="let year of yearsList">
                 {{year}}
             </mat-button-toggle>
         </mat-button-toggle-group>
     </div>
 
     <!-- successful launch -->
-    <div class="launch-successful mt-3" style="text-align: center;">
+    <div class="launch-successful mt-3 text-center">
         <h3>Successful Launch</h3>
-        <mat-button-toggle-group class="row" style="display: flex;border: none;" multiple="false"
-            formControlName='isLaunchSuccessful'>
-            <mat-button-toggle (change)="onFilterChange()" class="column" style="flex: 40%;margin: 10px 5px;"
-                [value]="option.code" *ngFor="let option of trueFalseList">
+        <mat-button-toggle-group class="row" multiple="false" formControlName='isLaunchSuccessful'>
+            <mat-button-toggle (change)="onFilterChange()" class="column" [value]="option.code"
+                *ngFor="let option of trueFalseList">
                 {{option.label}}
             </mat-button-toggle>
         </mat-button-toggle-group>
     </div>
 
     <!-- successful landing -->
-    <div class="landing-successful mt-3" style="text-align: center;">
+    <div class="landing-successful mt-3 text-center">
         <h3>Successful Landing</h3>
-        <mat-button-toggle-group class="row" style="display: flex;border: none;" multiple="false"
-            formControlName='isLandingSuccessful'>
-            <mat-button-toggle (change)="onFilterChange()" class="column" style="flex: 40%;margin: 10px 5px;"
-                [value]="option.code" *ngFor="let option of trueFalseList">
+        <mat-button-toggle-group class="row" multiple="false" formControlName='isLandingSuccessful'>
+            <mat-button-toggle (change)="onFilterChange()" class="column" [value]="option.code"
+                *ngFor="let option of trueFalseList">
                 {{option.label}}
             </mat-button-toggle>
         </mat-button-toggle-group>

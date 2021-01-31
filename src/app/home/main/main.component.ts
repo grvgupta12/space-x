@@ -17,10 +17,13 @@ export class MainComponent implements OnInit {
     let sub = this.route
       .queryParams
       .subscribe(params => {
-        if (params && params['launchSuccessFlag'] && params['landSuccessFlag'] && params['launchYear']) {
+        if (params &&
+          (params['launchSuccessFlag'] !== null && params['launchSuccessFlag'] !== undefined)
+          && (params['landSuccessFlag'] !== null && params['landSuccessFlag'] !== undefined)
+          && (params['launchYear'] !== null && params['launchYear'] !== undefined)) {
           this.landingPageService.getFilteredData({
-            'launchSuccessFlag': params['landSuccessFlag'],
-            'landSuccessFlag': params['launchSuccessFlag'],
+            'launchSuccessFlag': params['launchSuccessFlag'],
+            'landSuccessFlag': params['landSuccessFlag'],
             'launchYear': params['launchYear']
           }).subscribe((response) => {
             if (response) {
@@ -28,19 +31,19 @@ export class MainComponent implements OnInit {
             }
           });
         }
-        else if (params && params['launchSuccessFlag'] && params['landSuccessFlag']) {
+        else if (params && (params['launchSuccessFlag'] !== null && params['launchSuccessFlag'] !== undefined) && (params['landSuccessFlag'] !== null && params['landSuccessFlag'] !== undefined)) {
           this.landingPageService.getSuccessfulLaunchAndLandData({
-            'launchSuccessFlag': params['landSuccessFlag'],
-            'landSuccessFlag': params['launchSuccessFlag']
+            'launchSuccessFlag': params['launchSuccessFlag'],
+            'landSuccessFlag': params['landSuccessFlag']
           }).subscribe((response) => {
             if (response) {
               this.spaceXdetails = response;
             }
           });
         }
-        else if (params && params['launchSuccessFlag']) {
+        else if (params && (params['launchSuccessFlag'] !== null && params['launchSuccessFlag'] !== undefined)) {
           this.landingPageService.getSuccessfulLaunchingData({
-            'launchSuccessFlag': params['landSuccessFlag']
+            'launchSuccessFlag': params['launchSuccessFlag']
           }).subscribe((response) => {
             if (response) {
               this.spaceXdetails = response;

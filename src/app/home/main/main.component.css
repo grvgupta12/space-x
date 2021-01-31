@@ -19,4 +19,9 @@ mat-toolbar {
     list-style: none;
     padding: 0;
     margin: 0;
+    font-size: 16px;
+}
+
+h4{
+ color: #551A8B;
 }

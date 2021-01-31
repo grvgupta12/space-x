@@ -45,13 +45,29 @@ export class SidebarComponent implements OnInit {
   onFilterChange() {
     if (this.filterForm) {
       if (this.filterForm.value) {
-        this.router.navigate([], {
-          queryParams: {
-            'launchSuccessFlag': this.filterForm.value.isLaunchSuccessful,
-            'landSuccessFlag': this.filterForm.value.isLandingSuccessful,
-            'launchYear': this.filterForm.value.year
-          }
-        });
+        if (this.filterForm.value.isLaunchSuccessful !== null && this.filterForm.value.isLandingSuccessful != null && this.filterForm.value.year !== null) {
+          this.router.navigate([], {
+            queryParams: {
+              'launchSuccessFlag': this.filterForm.value.isLaunchSuccessful,
+              'landSuccessFlag': this.filterForm.value.isLandingSuccessful,
+              'launchYear': this.filterForm.value.year
+            }
+          });
+        } else if (this.filterForm.value.isLaunchSuccessful !== null && this.filterForm.value.isLandingSuccessful != null) {
+          this.router.navigate([], {
+            queryParams: {
+              'launchSuccessFlag': this.filterForm.value.isLaunchSuccessful,
+              'landSuccessFlag': this.filterForm.value.isLandingSuccessful
+            }
+          });
+        } else if (this.filterForm.value.isLaunchSuccessful !== null) {
+          this.router.navigate([], {
+            queryParams: {
+              'launchSuccessFlag': this.filterForm.value.isLaunchSuccessful
+            }
+          });
+        }
+
       }
 
     }
